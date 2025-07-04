@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Sum Matrix Elements", "1. Sum Matrix Elements\1. Sum Matrix Elements.csproj", "{5C04C2CB-EE08-44F2-8631-434B432C0FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Sum Matrix Columns", "2. Sum Matrix Columns\2. Sum Matrix Columns.csproj", "{BDD630EC-FD33-4868-81D8-057D7C53A8D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C04C2CB-EE08-44F2-8631-434B432C0FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C04C2CB-EE08-44F2-8631-434B432C0FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C04C2CB-EE08-44F2-8631-434B432C0FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C04C2CB-EE08-44F2-8631-434B432C0FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD630EC-FD33-4868-81D8-057D7C53A8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD630EC-FD33-4868-81D8-057D7C53A8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD630EC-FD33-4868-81D8-057D7C53A8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD630EC-FD33-4868-81D8-057D7C53A8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E750C12F-5A48-4DC5-9BA1-5BAF87B8E927}
+	EndGlobalSection
+EndGlobal
