@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&amp;display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font: 16px/1.5 "PT Sans", sans-serif;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+/*Components*/
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    display: block;
+    list-style: none;
+
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.flex-columns {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-columns.c2>* {
+    flex: 1 1 45%;
+}
+
+.flex-columns.c3>* {
+    flex: 0 0 30%;
+}
+
+
+/*Sections*/
+
+body {
+    background-image: url('images/background.jpg');
+    background-position: center -20em;
+    background-size: 1920px auto;
+    background-repeat: no-repeat;
+}
+
+.section .wrapper {
+    /* max-width: 700px;*/
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section .wrapper.narrow {
+    max-width: 1000px;
+}
+
+
+.section-catalog header,
+.section-about,
+.section-banner {
+    text-align: center;
+}
+
+.site-header .site-tittle a {
+    display: block;
+    width: 7em;
+    height: 4em;
+    background: url('images/logo.png') center no-repeat;
+    background-size: contain;
+    text-indent: -100vh;
+    overflow: hidden;
+}
+
+.section-banner .wrapper {
+    padding: 6em 0 4em 0;
+}
+
+.section-banner .wrapper h2 {
+    padding-bottom: 1rem;
+}
+
+.section-banner .wrapper .button {
+    display: inline-block;
+    background: white;
+    border-radius: 0.3em;
+    color: #666;
+    margin-top: 2em;
+    padding: 0.5em 1em;
+}
+
+.section-catalog header h3 {
+    font-size: 1.2em;
+}
+
+.section-catalog .flex-columns.c2 {
+    gap: 11em;
+}
+
+.section-catalog .flex-columns.c2 article {
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+}
+
+.section-catalog .flex-columns.c2 article>* {
+    flex: 0 0 50%;
+}
+
+.section-catalog .flex-columns.c2 article h4 {
+    font-size: 1em;
+    text-align: center;
+}
+
+.section-catalog .flex-columns.c2 article .media {
+    overflow: hidden;
+    position: relative;
+}
+
+.section-catalog .flex-columns.c2 article .media img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+.section-catalog .flex-columns.c3 {
+    gap: 3em;
+}
+
+.section-catalog .flex-columns.c2 article section {
+    background: white;
+    padding: 3em 2em;
+}
+
+.section-catalog .flex-columns.c3 img {
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
+}
+
+.section-furniture {
+    background: white;
+}
+
+.section-furniture .wrapper {
+    padding: 3em 2em;
+}
+
+.section-furniture .flex-columns.c3 {
+    gap: 2em
+}
+
+.section-furniture .flex-columns.c3 img {
+    height: 5em;
+    width: 5em;
+    margin: 0 auto;
+}
+
+.section-furniture .flex-columns.c3>* {
+    text-align: center;
+    flex: 1 1 30%;
+    /* за да се опънат докрай */
+}
+
+.section-furniture .flex-columns.c3 h4 {
+    font-size: 1.2em;
+}
+
+.section-about .wrapper {
+    padding: 2em 2em;
+    opacity: 0.7;
+}
+
+.section-about .wrapper header h3 {
+    font-size: 1.2em;
+}
+
+.section-about .wrapper header {
+    padding-bottom: 2em;
+}
+
+.section-about .wrapper header p {
+    font-style: italic;
+}
+
+.section-about .wrapper p {
+    max-width: 100ch;
+    margin: 0 auto;
+}
+
+.section-catalog .wrapper {
+    padding: 1em 0 2em 0;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.section-catalog header {
+    padding-bottom: 1.5em;
+}
+
+.site-footer {
+    background: #2d333c;
+    color: white;
+    text-align: center;
+}
+
+.site-footer .wrapper {
+    padding: 1em 0;
+}
+
+.section-catalog {
+    background: #60ACC1;
+
+}

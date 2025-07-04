@@ -1,0 +1,32 @@
+.flex-container {
+    width: 330px;
+    height: 170px;
+     border: 2px solid blue;
+     padding: 1em;
+     display: flex;
+     flex-wrap: wrap;
+     align-items:flex-start ;
+     align-content: flex-start;
+ }
+.flex-container.align-content-flex-start{
+    align-content: flex-start;
+}
+.flex-container.align-content-flex-center{
+    align-content:center;
+}
+.flex-container.align-content-flex-end{
+    align-content: flex-end;
+}
+.flex-container.align-content-flex-space-between{
+    align-content: space-between;
+}
+.flex-container.align-content-flex-space-around{
+    align-content: space-around;
+}
+
+
+ .flex-item {
+     border: 2px solid black;
+     background: #eee;
+     padding: 1em;
+ }

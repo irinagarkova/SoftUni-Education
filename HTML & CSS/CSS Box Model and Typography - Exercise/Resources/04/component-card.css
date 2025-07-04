@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body {
+    background: #eee;
+    padding: 2em;
+}
+
+.card {
+    display: block;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 0.3em;
+    margin: 0 auto;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+}
+
+.card span {
+    display: block;
+
+}
+
+.card .content,
+.card .footer {
+
+    padding-inline: 1.5em;
+
+}
+
+.card .title {
+    margin-top: 0.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.card .footer {
+    padding-top: 1em;
+    overflow: hidden;
+}
+
+.card .footer span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}

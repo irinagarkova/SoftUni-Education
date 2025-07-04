@@ -1,0 +1,421 @@
+.upload-container {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 5%;
+}
+
+h1 {
+    color: #631377 ;
+    margin-bottom: -1%;
+}
+
+h4 {
+    opacity: 0.7;
+    display: none;
+}
+body, h2, select, button, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/Background_login.png'); /* Replace with the correct path */
+    background-size: cover;
+    background-position: center bottom 90%;
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* Hide content overflow */
+    background-color: #e8b0f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+}
+
+header {
+    background-color: rgba(169, 169, 169, 0.4);
+    color: #fff;
+    padding: 1vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 3.5vw;
+    z-index: 1;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+header:hover {
+    background-color: rgba(169, 169, 169, 0.7);
+}
+
+.logo img {
+    height: 2.6vw;
+    position: relative;
+}
+
+.logo {
+    height: 2.5vw;
+    margin-right: 2vw;
+    margin-left: 19vw;
+    
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 19.5%;
+    right: 67.5%;
+    bottom: 0.6vw; /* Adjust the bottom value to control the thickness of the underline */
+    height: 0.3vw;
+    background-color: #fff; /* Set the color of the underline to white */
+    transition: opacity 0.3s ease; /* Add a transition for a smoother effect */
+    opacity: 0; /* Initially, set the opacity to 0 (invisible) */
+    border-radius: 2px;
+}
+
+.logo:hover::after {
+    opacity: 1; /* When hovering, set the opacity to 1 (visible) */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2%;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1vw;
+    font-size: 130%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 110%;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.5vw;
+    left: 50%;
+    width: 0;
+    height: 15%;
+    background-color: #8503a5;
+    border-radius: 1vw;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+
+}
+
+.username-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Add padding for spacing */
+    margin-left: 8vw;
+    width: 10vw; /* Let it expand as needed */
+}
+
+.hidden {
+    display: none;
+}
+
+.welcome-text {
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-right: 5px;
+    
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #8503a5;
+}
+
+.login-container {
+    position: relative;
+    width: 3vw; /* Set the same width as the user icon */
+    height: 3vw; /* Set the same height as the user icon */
+}
+
+.user-icon {
+    width: 3vw;
+    height: 3vw;
+    background: url('/acc1.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.login-container:hover .user-icon {
+    background-color: #8503a5;
+    border-radius: 0;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #8503a5;
+    border-radius: 0;
+    z-index: 1;
+    top: 2.5vw;
+    right: 0vw;
+    width: 10vw;
+    /* Add transition for smooth dropdown */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    
+}
+
+.login-container:hover .dropdown-content {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.6vw 1.2vw;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff;
+    color: #8503a5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #9b3bb3;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.column {
+    width: calc(30% - 5px); /* Adjust the width based on your layout preferences */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: #e8b0f6;
+}
+
+.dropdown, .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.dropdown:focus, .input-field:focus {
+    outline: #631377; /* Remove the default focus outline */
+    border-color: #631377; /* Change the border color when in focus */
+    color: #000000;
+    background-color: #f4e3FF;
+}
+
+
+.privacy-policy {
+    background-color: #631377 ;
+    color: black ;
+    width: 70%;
+    max-width: 1170px;
+    height: 800px;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items:center; /* Центрира съдържанието по хоризонтала */
+    box-sizing: border-box;
+   
+}
+.privacy-policy .content{
+    background-color: white ;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    flex: 1; 
+    margin: 0 auto;
+    padding: 5%;
+    overflow-y: auto;
+    box-sizing: border-box; 
+}
+.text-explanation{
+    text-align: center;
+    margin-bottom: 5%;
+    opacity:0.7;
+    
+}
+
+.privacy-policy h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15%;
+    text-align: center;
+    
+}
+
+.privacy-policy h2 {
+    font-size:1.5rem;
+    color: black ;
+    margin-top: 0;
+    opacity: 0.8;
+}
+
+.privacy-policy p {
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.privacy-policy ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    opacity: 0.7;
+}
+
+.privacy-policy li {
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+footer {
+    background-color: rgba(51, 51, 51, 1); /* Reduced opacity */
+    color: #fff;
+    padding: 0.5vw 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer h2 {
+    color: #fff;
+    font-size: 1.6em;
+    margin-top: 12%;
+    margin-bottom: 3%;
+    padding: 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set a max-width for the content within the footer */
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    flex: 1; /* Allow the links to take up available space */
+    margin-left: 5%; /* Ensure the columns start at the left */
+    margin-bottom: 3%;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%; /* Adjust spacing between columns */
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.8vw;
+    transition: color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: #8503a5; /* Adjust the color on hover */
+}
+
+.footer-text {
+    font-size: 1em;
+    margin-left: 10%;
+    margin-top: -7%;
+}
+
+.footer-links ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.footer-links li {
+    list-style-type: none; /* Remove bullet style */
+    margin-bottom: 0.5vw; /* Add spacing between links */
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    margin-top: 0.5vw; /* Add spacing above the icons */
+}
+
+.social-icon {
+    width: 34px; /* Set the width of the icons */
+    height: 34px; /* Set the height of the icons */
+    margin: 2%; /* Add spacing between the icons */
+    background-size: cover; /* Ensure the background image covers the entire element */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Specific social media icons */
+.facebook-icon {
+    background-image: url('/facebook_icon.png');
+}
+.facebook-icon:hover {
+    background-image: url('/facebook_hover.png');
+}
+
+.instagram-icon {
+    background-image: url('/instagram_icon.png');
+}
+.instagram-icon:hover {
+    background-image: url('/instagram_hover.png');
+}
+
+.tiktok-icon {
+    background-image: url('/tiktok_icon.png');
+}
+.tiktok-icon:hover {
+    background-image: url('/tiktok_hover.png');
+}

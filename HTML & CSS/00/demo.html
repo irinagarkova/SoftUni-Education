@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar</title>
+    <style>
+        /* Примерен стил за контейнер със съдържание */
+        .scroll-container {
+            width: 300px;
+            height: 200px;
+            overflow-y: scroll; /* Активира вертикален скрол */
+            background-color: lightgray;
+        }
+
+        .content {
+            height: 400px;
+        }
+
+        /* Стилизация на скрол бара за WebKit браузъри */
+        /* Цялата зона на скрол бара */
+        ::-webkit-scrollbar {
+            width: 15px; /* Ширина на скрол бара */
+        }
+
+        /* Подвижната част на скрол бара */
+        ::-webkit-scrollbar-thumb {
+            background-color: darkblue; /* Цвят на бутона за скролиране */
+            border-radius: 6px; /* Заоблени ъгли */
+            border: 3px solid lightgray; /* Допълнителен бордюр */
+        }
+
+        /* Зоната, в която се движи скрол бара */
+        ::-webkit-scrollbar-track {
+            background-color: white; /* Цвят на фона на скрол бара */
+        }
+
+        /* Стилизация на скрол бара за Firefox */
+        /* Примерен стил за тъмна тема на скрол бара */
+        scrollbar-width: thin; /* По-тънък скрол бар */
+        scrollbar-color: darkblue lightgray; /* Цвят на бутона и на фона */
+    </style>
+</head>
+<body>
+
+    <h1>Custom Scrollbar Example</h1>
+
+    <div class="scroll-container">
+        <div class="content">
+            <p>This is a scrollable area with a custom scrollbar. Scroll down to see more content.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            <p>Cras venenatis euismod malesuada. Phasellus aliquam neque sed mauris luctus, a tincidunt turpis blandit.</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Selection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.jpg">
+</head>
+
+<body>
+    <header id="header">
+        <a href="../" class="logo">
+            <img src="../admin-ajax.png" alt="SpotCars Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/search?type=Cars">Buy</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/dealers">Dealers</a></li>
+                <li><a href="/services">Services</a></li>
+            </ul>
+        </nav>
+
+        <div class="username-container">
+            <span
+                class="welcome-text <?php echo isset($_SESSION['username']) && !empty($_SESSION['username']) ? '' : 'hidden'; ?>">Welcome,
+            </span>
+            <span
+                class="username <?php echo isset($_SESSION['username']) && !empty($_SESSION['username']) ? '' : 'hidden'; ?>">
+                <?php echo isset($_SESSION['username']) && !empty($_SESSION['username']) ? $_SESSION['username'] : ''; ?>
+            </span>
+        </div>
+
+        <div class="login-container">
+            <div class="user-icon" onclick="toggleDropdown()"></div>
+            <div id="dropdown" class="dropdown-content">
+                <?php
+                if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+                    echo "<a href='" . $accountPath . "/account-settings'>My Account</a>
+                          <a href='/logout.php'>Logout</a>
+                          <a href='" . $accountPath . "/account-settings'>Account Settings</a>
+                          <a href='" . $accountPath . "/saved_listings'>Saved Listings</a>
+                          <a href='" . $accountPath . "/my_listings'>My Listings</a>
+                          <a href='" . $accountPath . "/upgrade_account'>Upgrade Account</a>
+                          <a href='" . $accountPath . "/post_listing'>Post Listing</a>";
+                } 
+                else {
+                    echo '<a href="/loginform">Login</a>
+                          <a href="/register">Register</a>';
+                }
+                ?>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="privacy-policy">
+            <div class="title">
+                <h1>Cookies Policy</h1>
+            </div>
+            <div class="content">
+                <h3 class="text-explanation">At SpotCars, we use cookies to enhance your user experience and to ensure the proper functioning of
+                    the site. This Cookies Policy explains what cookies are, what cookies we use, and how you can manage
+                    cookies on your device.</h3>
+                <h2>What Are Cookies?</h2>
+                <p>Cookies are small text files that are stored on your device (computer, tablet, smartphone) by the
+                    websites you visit. They help websites remember information about your visit, such as preferences
+                    and settings, which makes future visits easier and more efficient.</p>
+                    <h2>What Cookies Do We Use?</h2>
+                <ul>
+                    <li>Essential Cookies: These cookies are necessary for the proper functioning of the site and include session cookies that remember information during your visit.</li>
+                    <li>Functional Cookies: These cookies help remember your preferences and settings, so you don’t have to re-enter them on subsequent visits.</li>
+                    <li>Analytical Cookies: We use these cookies to collect information about how you use our site so we can improve our services and understand which pages you visit most often.</li>
+                </ul>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit id voluptatum delectus expedita
+                    cupiditate. Consectetur mollitia blanditiis at maiores iusto voluptatibus dolorum autem iure ipsum
+                    odit,
+                    illo tenetur vel et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quam assumenda,
+                    earum eos voluptatibus voluptas sapiente at autem pariatur quos accusamus mollitia velit. Culpa,
+                    atque.
+                    Repellendus eos nulla aut deserunt.</p>
+
+                <h2>Changes to the Cookies Policy</h2>
+                <p>We may periodically update our Cookies Policy to reflect changes in how we use cookies. Any changes will be posted on this page. We encourage you to review this page regularly for any updates.
+
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias veritatis dolorem nobis consectetur
+                    enim
+                    nihil cumque suscipit, expedita vel debitis tempora voluptates eos aliquam inventore necessitatibus,
+                    temporibus repellat quo nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    accusamus
+                    est optio possimus culpa maiores reprehenderit, earum in nobis perferendis provident quo
+                    repudiandae,
+                    autem eaque labore, sapiente vel dolores dolor..Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Voluptatibus in facilis nesciunt similique cumque, sed pariatur tempore numquam fuga voluptatem,
+                    repellat obcaecati hic ipsum alias eaque quas eum assumenda voluptate.Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Alias veritatis dolorem nobis consectetur enim
+                    nihil cumque suscipit, expedita vel debitis tempora voluptates eos aliquam inventore necessitatibus,
+                    temporibus repellat quo nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    accusamus
+                    est optio possimus culpa maiores reprehenderit, earum in nobis perferendis provident quo
+                    repudiandae,
+                    autem eaque labore, sapiente vel dolores dolor..Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Voluptatibus in facilis nesciunt similique cumque, sed pariatur tempore numquam fuga voluptatem,
+                    repellat obcaecati hic ipsum alias eaque quas eum assumenda voluptate.</p>
+
+               
+                <h2>Contact Us</h2>
+                <p>If you have any questions about our Cookies Policy, please contact us at email.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus esse incidunt eaque hic rerum
+                    excepturi eius, quasi quisquam exercitationem tempora veritatis eveniet, similique dicta eum sed
+                    deserunt! Dolor, laborum veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                    veritatis dolorem nobis consectetur enim
+                    nihil cumque suscipit, expedita vel debitis tempora voluptates eos aliquam inventore necessitatibus,
+                    temporibus repellat quo nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    accusamus
+                    est optio possimus culpa maiores reprehenderit, earum in nobis perferendis provident quo
+                    repudiandae,
+                    autem eaque labore, sapiente vel dolores dolor..Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Voluptatibus in facilis nesciunt similique cumque, sed pariatur tempore numquam fuga voluptatem,
+                    repellat obcaecati hic ipsum alias eaque quas eum assumenda voluptate.Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Alias veritatis dolorem nobis consectetur enim
+                    nihil cumque suscipit, expedita vel debitis tempora voluptates eos aliquam inventore necessitatibus,
+                    temporibus repellat quo nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    accusamus
+                    est optio possimus culpa maiores reprehenderit, earum in nobis perferendis provident quo
+                    repudiandae,
+                    autem eaque labore, sapiente vel dolores dolor..Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Voluptatibus in facilis nesciunt similique cumque, sed pariatur tempore numquam fuga voluptatem,
+                    repellat obcaecati hic ipsum alias eaque quas eum assumenda voluptate.</p>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2024 Spotcars ltd. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <div class='footer-column'>
+                    <h2>Contacts</h2>
+                    <ul>
+                        <li><a href="/contactus">Contact Us</a></li>
+                    </ul>
+                    <div class="social-media-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61551991467968" target="_blank"
+                            class="social-icon facebook-icon"></a>
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fspotcars.bg%3Figsh%3DMTNsejZqb2ZjbzJtNA%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAAR0v2ekCN7qlAdHb0A3ZfI6B4XtBy-LR3M59_Dh2bzPVHLkPjq8zCV5V1qE_aem_AdtFoAxZvT-UUSZYSyo875kiKaHI2Do7a1ok9tLVK3YRQUKnc7bFWcpVA00BN8Ezm2n0Fo0qHNxHEhJjtTdofQ3u&h=AT3g6o4nkxInIiAVO2tp5ihqJOrhu2XFS3Asyw0tPZ5rZZtWhefXrSnFT3QY9EbOMxuTrCUI7ijghx5viK4yPKcR-9VKOnFZmwFnhuNcGXgyxaaWbTwHxqTIRRQSikQoTIWsfw"
+                            target="_blank" class="social-icon instagram-icon"></a>
+                        <a href="https://tiktok.com" target="_blank" class="social-icon tiktok-icon"></a>
+                    </div>
+                </div>
+                <div class='footer-column'>
+                    <h2>About Spotcars</h2>
+                    <ul>
+                        <li><a href="/aboutus">About Us</a></li>
+                        <li><a href="/privacypolicy">Privacy Policy</a></li>
+                        <li><a href="/cookiespolicy">Cookies Policy</a></li>
+                        <li><a href="/termsandconditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</html>
