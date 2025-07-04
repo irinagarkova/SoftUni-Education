@@ -1,0 +1,42 @@
+YokoYong has joined the team. Welcome!
+DaniDavis has joined the team. Welcome!
+DaniDavis has already joined the team.
+PeterSully has joined the team. Welcome!
+ValGendor has joined the team. Welcome!
+No content member is able to create the Inheritance resource.
+CSharp path is not valid.
+TrainingMember is not a valid member type.
+Position is occupied.
+Lab type is not handled by Content Department.
+DaniDavis created Exam - JavaScriptOOP-Retake.
+ValGendor created Workshop - TicTacToe.
+DaniDavis created Exam - JavaScriptOOP-Regular.
+The JavaScriptOOP-Regular resource is being created.
+PeterSully created Exam - JavaOOP-Regular.
+VideoContent type is not handled by Content Department.
+PeterSully created Exam - JavaOOP-Retake.
+WorkShop type is not handled by Content Department.
+No content member is able to create the Inheritance resource.
+No content member is able to create the C#OOP-Regular resource.
+Provide the correct member name.
+TicTacToe is tested and ready for approval.
+ValGendor has no resources for testing.
+ValGendor has no resources for testing.
+Provide the correct member name.
+JavaOOP-Regular is tested and ready for approval.
+JavaOOP-Retake is tested and ready for approval.
+Provide the correct member name.
+YokoYong approved JavaOOP-Regular.
+YokoYong returned JavaOOP-Retake for a re-test.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+YokoYong approved TicTacToe.
+JavaScriptOOP-Retake cannot be approved without being tested.
+Finished Tasks:
+--TicTacToe (Workshop), Created By: ValGendor
+--JavaOOP-Regular (Exam), Created By: PeterSully
+Team Report:
+--YokoYong (TeamLead) – Currently working on 1 tasks.
+DaniDavis - JavaScript path. Currently working on 2 tasks.
+PeterSully - Java path. Currently working on 0 tasks.
+ValGendor - Python path. Currently working on 0 tasks.
