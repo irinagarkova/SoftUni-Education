@@ -1,0 +1,25 @@
+
+API Code
+
+Load/Read List list ot resources
+
+Create single resources
+Read single resources
+Update single resources
+Delete single resources
+
+
+DOM Code
+
+Create Entry
+Delete Entry 
+Update Entry = Create Entry + Delete Entry 
+
+
+EVENT Heandlers
+
+createHeandler
+updateHeandler
+deleteHeandler
+
+
